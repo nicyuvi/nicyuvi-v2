@@ -9,8 +9,8 @@ export default function Home() {
         <NavBar />
       </header>
       <main>
-        <h1 className="text-muted">Website title</h1>
-        <h2 className="text-muted-foreground">Website title</h2>
+        <h2 className="text-accent">Website title</h2>
+        <h2 className="text-accent-foreground">Website title</h2>
         <section>Hero</section>
         <section id="#experience">Experience</section>
         <section id="#projecs">Projects</section>
@@ -24,7 +24,8 @@ export default function Home() {
         <p>footer</p>
       </footer>
       <Button>test</Button>
-      <Button variant="secondary">test</Button>
+      <Button variant="secondary">secondary</Button>
+      <Button variant="outline">outline</Button>
     </>
   );
 }
