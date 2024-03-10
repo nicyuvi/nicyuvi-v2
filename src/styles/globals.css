@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* replace 158 with 208 38.5% 16.5% */
 
 @layer base {
   :root {
@@ -26,7 +25,7 @@
     --ring: 196 77.4% 54.9%;
     --radius: 0.5rem;
   }
-  /* 196 50 10 -> 0 0 13  */
+
   .dark {
     --background: 0 0% 13%;
     --foreground: 196 5% 90%;

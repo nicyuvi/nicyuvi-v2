@@ -1,3 +1,4 @@
+import MobileNav from "@/components/mobile-nav";
 import NavBar from "@/components/nav-bar";
 import SideNav from "@/components/side-nav";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,8 @@ export default function Home() {
   return (
     <>
       <header>
-        <NavBar />
+        <NavBar displayClass="hidden md:flex" />
+        <MobileNav displayClass="md:hidden" />
       </header>
       <main>
         <h2 className="text-accent">Website title</h2>
