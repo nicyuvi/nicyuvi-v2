@@ -10,7 +10,7 @@ export default function Home() {
         <NavBar displayClass="hidden md:flex" />
         <MobileNav displayClass="md:hidden" />
       </header>
-      <main>
+      <main className="mt-[62px]">
         <h2 className="text-accent">Website title</h2>
         <h2 className="text-accent-foreground">Website title</h2>
         <section>Hero</section>
