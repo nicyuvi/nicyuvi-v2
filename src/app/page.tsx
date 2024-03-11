@@ -1,7 +1,7 @@
-import MobileNav from "@/components/mobile-nav";
-import NavBar from "@/components/nav-bar";
-import SideNav from "@/components/side-nav";
-import { Button } from "@/components/ui/button";
+import MobileNav from '@/components/mobile-nav'
+import NavBar from '@/components/nav-bar'
+import SideNav from '@/components/side-nav'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -29,5 +29,5 @@ export default function Home() {
       <Button variant="secondary">secondary</Button>
       <Button variant="outline">outline</Button>
     </>
-  );
+  )
 }
