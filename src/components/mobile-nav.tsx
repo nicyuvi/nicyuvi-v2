@@ -1,17 +1,17 @@
-"use client";
-import { ModeToggle } from "@/components/ui/mode-toggle";
-import { NAV_LINKS } from "@/lib/constants";
-import { Menu } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+'use client'
+import { ModeToggle } from '@/components/ui/mode-toggle'
+import { NAV_LINKS } from '@/lib/constants'
+import { Menu } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
 
 type MobileNavProps = {
-  displayClass: string;
-};
+  displayClass: string
+}
 
 export default function MobileNav({ displayClass }: MobileNavProps) {
-  const [active, setActive] = useState<boolean>(false);
+  const [active, setActive] = useState<boolean>(false)
 
   return (
     <>
@@ -49,5 +49,5 @@ export default function MobileNav({ displayClass }: MobileNavProps) {
         </div>
       </nav>
     </>
-  );
+  )
 }
