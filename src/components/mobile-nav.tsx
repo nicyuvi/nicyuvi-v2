@@ -16,18 +16,18 @@ export default function MobileNav({ displayClass }: MobileNavProps) {
   return (
     <>
       <nav
-        className={`${displayClass} fixed top-0 right-0 left-0 backdrop-blur shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] py-2`}
+        className={`${displayClass} fixed left-0 right-0 top-0 py-2 shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] backdrop-blur`}
       >
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
               src={`/brand-logo.png`}
               alt="brand logo"
               width="40"
               height="40"
-              className="mr-2 w-auto h-auto"
+              className="mr-2 h-auto w-auto"
             />
-            <h1 className="font-bold">Nicolis Yuvienco</h1>
+            <span className="font-bold">Nicolis Yuvienco</span>
           </Link>
           <i onClick={() => setActive(!active)} className="cursor-pointer">
             <Menu />

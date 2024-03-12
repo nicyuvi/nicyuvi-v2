@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 196 - light blue */
 @layer base {
   :root {
     --background: 196 100% 95%;

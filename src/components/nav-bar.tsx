@@ -1,17 +1,17 @@
-import { ModeToggle } from "@/components/ui/mode-toggle";
-import Link from "next/link";
-import Image from "next/image";
-import { NAV_LINKS } from "@/lib/constants";
+import { ModeToggle } from '@/components/ui/mode-toggle'
+import Link from 'next/link'
+import Image from 'next/image'
+import { NAV_LINKS } from '@/lib/constants'
 
 type NavBarProps = {
-  displayClass: string;
-};
+  displayClass: string
+}
 
 export default function NavBar({ displayClass }: NavBarProps) {
-  console.log(NAV_LINKS);
+  console.log(NAV_LINKS)
   return (
     <nav
-      className={`${displayClass} fixed top-0 right-0 left-0 backdrop-blur justify-between items-center shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] py-2`}
+      className={`${displayClass} fixed left-0 right-0 top-0 items-center justify-between py-2 shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] backdrop-blur`}
     >
       <Link href="/" className="flex items-center">
         <Image
@@ -19,9 +19,9 @@ export default function NavBar({ displayClass }: NavBarProps) {
           alt="brand logo"
           width="40"
           height="40"
-          className="mr-2 w-auto h-auto"
+          className="mr-2 h-auto w-auto"
         />
-        <h1 className="font-bold">Nicolis Yuvienco</h1>
+        <span className="font-bold">Nicolis Yuvienco</span>
       </Link>
       <ul className="flex items-center">
         {NAV_LINKS.map((link, index) => (
@@ -34,5 +34,5 @@ export default function NavBar({ displayClass }: NavBarProps) {
         </li>
       </ul>
     </nav>
-  );
+  )
 }
