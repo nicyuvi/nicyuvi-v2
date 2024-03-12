@@ -11,28 +11,30 @@ export default function NavBar({ displayClass }: NavBarProps) {
   console.log(NAV_LINKS)
   return (
     <nav
-      className={`${displayClass} container fixed left-0 right-0 top-0 items-center justify-between py-2 shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] backdrop-blur`}
+      className={`${displayClass} fixed left-0 right-0 top-0 py-2 shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] backdrop-blur`}
     >
-      <Link href="/" className="flex items-center">
-        <Image
-          src={`/brand-logo.png`}
-          alt="brand logo"
-          width="40"
-          height="40"
-          className="mr-2 h-auto w-auto"
-        />
-        <span className="font-bold">Nicolis Yuvienco</span>
-      </Link>
-      <ul className="flex items-center">
-        {NAV_LINKS.map((link, index) => (
-          <li key={index} className="mr-4">
-            <Link href={`#${link}`}>{link}</Link>
+      <div className="container flex justify-between">
+        <Link href="/" className="flex items-center">
+          <Image
+            src={`/brand-logo.png`}
+            alt="brand logo"
+            width="40"
+            height="40"
+            className="mr-2 h-auto w-auto"
+          />
+          <span className="font-bold">Nicolis Yuvienco</span>
+        </Link>
+        <ul className="flex items-center">
+          {NAV_LINKS.map((link, index) => (
+            <li key={index} className="mr-4">
+              <Link href={`#${link}`}>{link}</Link>
+            </li>
+          ))}
+          <li>
+            <ModeToggle />
           </li>
-        ))}
-        <li>
-          <ModeToggle />
-        </li>
-      </ul>
+        </ul>
+      </div>
     </nav>
   )
 }

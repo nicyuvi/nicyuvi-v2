@@ -7,8 +7,8 @@ import Hero from '@/components/hero'
 export default function Home() {
   return (
     <>
-      <header className="container">
-        <NavBar displayClass="hidden md:flex" />
+      <header>
+        <NavBar displayClass="hidden md:block" />
         <MobileNav displayClass="md:hidden" />
       </header>
       <main className="container mt-[62px]">
