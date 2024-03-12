@@ -1,8 +1,8 @@
-import MobileNav from '@/components/mobile-nav'
-import NavBar from '@/components/nav-bar'
-import SideNav from '@/components/side-nav'
+import MobileNav from '@/components/layout/mobile-nav'
+import NavBar from '@/components/layout/nav-bar'
+import SideNav from '@/components/layout/side-nav'
 import { Button } from '@/components/ui/button'
-import Hero from '@/components/hero'
+import Hero from './(components)/hero'
 
 export default function Home() {
   return (
