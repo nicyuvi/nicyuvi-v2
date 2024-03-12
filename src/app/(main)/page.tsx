@@ -3,6 +3,7 @@ import NavBar from '@/components/layout/nav-bar'
 import SideNav from '@/components/layout/side-nav'
 import { Button } from '@/components/ui/button'
 import Hero from './(components)/hero'
+import Experience from './(components)/experience'
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
         <section className="flex h-[calc(100vh_-_62px)] flex-col justify-center">
           <Hero />
         </section>
-        <section id="#experience">Experience</section>
+        <section id="#experience">
+          <Experience />
+        </section>
         <section id="#projecs">Projects</section>
         <section id="#about">About</section>
         <section id="#contact">Contact</section>
