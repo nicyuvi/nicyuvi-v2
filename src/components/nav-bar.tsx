@@ -11,7 +11,7 @@ export default function NavBar({ displayClass }: NavBarProps) {
   console.log(NAV_LINKS)
   return (
     <nav
-      className={`${displayClass} fixed left-0 right-0 top-0 items-center justify-between py-2 shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] backdrop-blur`}
+      className={`${displayClass} container fixed left-0 right-0 top-0 items-center justify-between py-2 shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] backdrop-blur`}
     >
       <Link href="/" className="flex items-center">
         <Image

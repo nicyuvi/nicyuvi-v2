@@ -7,11 +7,11 @@ import Hero from '@/components/hero'
 export default function Home() {
   return (
     <>
-      <header>
+      <header className="container">
         <NavBar displayClass="hidden md:flex" />
         <MobileNav displayClass="md:hidden" />
       </header>
-      <main className="mt-[62px]">
+      <main className="container mt-[62px]">
         <section className="flex h-[calc(100vh_-_62px)] flex-col justify-center">
           <Hero />
         </section>
