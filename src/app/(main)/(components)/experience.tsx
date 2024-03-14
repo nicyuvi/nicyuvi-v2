@@ -24,7 +24,7 @@ export default function Experience() {
           <span className="mb-4 block text-muted-foreground">
             Indie Developer
           </span>
-          <p className="mb-1 max-w-sm rounded bg-primary p-2">
+          <p className="mb-1 rounded bg-primary p-2">
             Working on Notehub: A collaborative, note taking web app
           </p>
           {techList.map((tech, index) => (

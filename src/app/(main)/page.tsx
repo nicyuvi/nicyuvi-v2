@@ -13,7 +13,7 @@ export default function Home() {
         <MobileNav displayClass="md:hidden" />
       </header>
       <main className="container mt-[62px]">
-        <section className="flex h-[calc(100vh_-_62px)] flex-col justify-center">
+        <section className="mx-auto flex h-[calc(100vh_-_62px)] flex-col justify-center">
           <Hero />
         </section>
         <section id="#experience" className="mb-4">
