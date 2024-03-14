@@ -16,7 +16,7 @@ export default function Home() {
         <section className="flex h-[calc(100vh_-_62px)] flex-col justify-center">
           <Hero />
         </section>
-        <section id="#experience">
+        <section id="#experience" className="mb-4">
           <Experience />
         </section>
         <section id="#projecs">Projects</section>
