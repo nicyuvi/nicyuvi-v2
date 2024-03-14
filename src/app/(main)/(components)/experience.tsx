@@ -9,11 +9,11 @@ export default function Experience() {
       <h2 className="mx-auto mb-4 max-w-sm border-b border-b-primary pb-2 text-center text-2xl">
         Experience
       </h2>
-      <div className="justify-center md:flex">
-        <span className="mr-4 w-1/2 text-right text-muted-foreground">
+      <div className="justify-center sm:flex">
+        <span className="mr-4 text-right text-muted-foreground sm:w-1/2">
           2023 - Present
         </span>
-        <div className="w-1/2">
+        <div className="sm:w-1/2">
           <Link
             href="https://notehub-app-six.vercel.app/"
             className="flex items-center"
@@ -24,7 +24,7 @@ export default function Experience() {
           <span className="mb-4 block text-muted-foreground">
             Indie Developer
           </span>
-          <p className="mb-1 rounded bg-primary p-2">
+          <p className="mb-1 max-w-sm rounded bg-primary p-2">
             Working on Notehub: A collaborative, note taking web app
           </p>
           {techList.map((tech, index) => (
