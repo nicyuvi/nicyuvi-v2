@@ -8,10 +8,11 @@ export default function Hero() {
         Nicolis Yuvienco.
       </h1>
       <h1 className="text-2xl font-semibold text-muted-foreground">
-        I&apos;m a Full-Stack Web Developer.
+        I&apos;m a Full-Stack Engineer.
       </h1>
       <p className="mb-12 font-semibold text-muted-foreground">
-        I build websites and applications using the latest technologies.
+        I build pixel-perfect websites and applications using the latest
+        technologies.
       </p>
       <div className="flex flex-col">
         <Button className="mb-4" variant="outline">

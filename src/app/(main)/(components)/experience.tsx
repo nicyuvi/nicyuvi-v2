@@ -4,7 +4,7 @@ export default function Experience() {
   const curr = {
     dates: '2023 - Present',
     company: 'Indie Developer',
-    role: 'Full-Stack Web Developer',
+    role: 'Full-Stack Engineer',
     description: 'Working on Notehub: A collaborative, note taking web app',
     techList: [
       'NextJS',
@@ -17,12 +17,13 @@ export default function Experience() {
       'Python',
       'Flask',
     ],
+    link: 'https://notehub-landing.vercel.app/',
   }
 
   const lensabl = {
     dates: '2021 - 2023',
     company: 'Lensabl',
-    role: 'Full-Stack Web Developer',
+    role: 'Full-Stack Engineer',
     description: `
       Built a custom ecommerce website and a dashboard that allows clients to customize the website. 
       Successfully demoed TailwindCSS to my team and implemented a scalable CSS solution for two SaaS projects.
@@ -32,6 +33,7 @@ export default function Experience() {
     techList: [
       'NextJS',
       'ReactJS',
+      'TypeScript',
       'HTML/SCSS',
       'TailwindCSS',
       'TanStack Query',
@@ -39,8 +41,31 @@ export default function Experience() {
       'Redux',
       'NodeJS',
       'PHP',
+      'Magento',
     ],
     link: 'https://lensabl.com',
+  }
+
+  const freelanceWebDev = {
+    dates: '2020 - 2021',
+    company: 'Freelance Web Developer',
+    role: 'Frontend Engineer',
+    description: `
+      Designed and worked with other engineers to build the ArcLogistix website.
+      Performed SEO on the ArcLogistix website and made it to the first page of results on Google 
+      when you search the company name.
+      Implemented best web accessibility practices, such as including alt attributes on all image elements, to conform to
+      WCAG standards and to ensure all content is ADA compliant.
+    `,
+    techList: [
+      'JavaScript',
+      'HTML/CSS/SCSS',
+      'TailwindCSS',
+      'Webpack',
+      'Bootstrap',
+      'Netlify',
+    ],
+    link: 'https://www.arclogistix.com/',
   }
 
   return (
@@ -48,16 +73,17 @@ export default function Experience() {
       <h2 className="mx-auto mb-4 max-w-sm border-b border-b-primary pb-2 text-center text-2xl">
         Experience
       </h2>
-      <div className="mb-6">
+      <div className="mb-10">
         <ExperienceCard
           dates={curr.dates}
           company={curr.company}
           role={curr.role}
           description={curr.description}
           techList={curr.techList}
+          link={curr.link}
         />
       </div>
-      <div className="mb-6">
+      <div className="mb-10">
         <ExperienceCard
           dates={lensabl.dates}
           company={lensabl.company}
@@ -65,6 +91,16 @@ export default function Experience() {
           description={lensabl.description}
           techList={lensabl.techList}
           link={lensabl.link}
+        />
+      </div>
+      <div className="mb-10">
+        <ExperienceCard
+          dates={freelanceWebDev.dates}
+          company={freelanceWebDev.company}
+          role={freelanceWebDev.role}
+          description={freelanceWebDev.description}
+          techList={freelanceWebDev.techList}
+          link={freelanceWebDev.link}
         />
       </div>
     </>
