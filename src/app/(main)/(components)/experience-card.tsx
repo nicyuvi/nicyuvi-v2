@@ -22,7 +22,7 @@ export default function ExperienceCard({
         Experience
       </h2>
       <div className="justify-center sm:flex">
-        <span className="mr-4 text-right text-muted-foreground sm:w-1/2">
+        <span className="mr-4 text-right  text-muted-foreground sm:w-1/2">
           {dates}
         </span>
         <div className="sm:w-1/2">
