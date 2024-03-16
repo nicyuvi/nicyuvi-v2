@@ -70,7 +70,7 @@ export default function Experience() {
 
   return (
     <>
-      <h2 className="mx-auto mb-4 max-w-sm border-b border-b-primary pb-2 text-center text-2xl">
+      <h2 className="mx-auto mb-10 max-w-sm border-b border-b-primary pb-2 text-center text-2xl">
         Experience
       </h2>
       <div className="mb-10">

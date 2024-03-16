@@ -33,7 +33,7 @@ export default function ExperienceCard({
           <ExternalLink />
         </Link>
         <div />
-        <div>
+        <Link href={link || '/'} target={link ? '_blank' : '_self'}>
           <span className="mb-4 block text-muted-foreground">{role}</span>
           <p className="mb-1 rounded bg-primary p-2">{description}</p>
           {techList.map((tech, index) => (
@@ -44,7 +44,7 @@ export default function ExperienceCard({
               {tech}
             </span>
           ))}
-        </div>
+        </Link>
       </div>
     </>
   )
