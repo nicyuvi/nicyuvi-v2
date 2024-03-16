@@ -27,7 +27,7 @@ export default function ExperienceCard({
         <Link
           href={link || '/'}
           target={link ? '_blank' : '_self'}
-          className="flex items-center"
+          className="flex items-center transition hover:-translate-y-0.5 hover:text-primary"
         >
           <h2 className="mr-2 text-2xl">{company}</h2>
           <ExternalLink />
