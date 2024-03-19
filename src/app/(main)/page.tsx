@@ -4,6 +4,7 @@ import SideNav from '@/components/layout/side-nav'
 import { Button } from '@/components/ui/button'
 import Hero from './(components)/hero'
 import Experience from './(components)/experience'
+import Model from './(components)/model'
 
 export default function Home() {
   return (
@@ -13,8 +14,11 @@ export default function Home() {
         <MobileNav displayClass="md:hidden" />
       </header>
       <main className="container mt-[62px]">
-        <section className="mx-auto flex h-[calc(100vh_-_62px)] flex-col justify-center">
-          <Hero />
+        <section className="flex h-[calc(100vh_-_62px)]">
+          <div>
+            <Hero />
+          </div>
+          <Model />
         </section>
         <section id="#experience" className="mb-4">
           <Experience />
