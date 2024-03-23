@@ -15,10 +15,12 @@ export default function Home() {
       </header>
       <main className="container mt-[62px]">
         <section className="flex h-[calc(100vh_-_62px)]">
-          <div>
+          <div className="w-3/5">
             <Hero />
           </div>
-          <Model />
+          <div className="w-2/5">
+            <Model />
+          </div>
         </section>
         <section id="#experience" className="mb-4">
           <Experience />
