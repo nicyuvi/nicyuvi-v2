@@ -17,35 +17,13 @@ export function Moppu(props) {
   const { nodes, materials } = useGLTF('models/scene.gltf')
   const myMesh = useRef()
 
-  // Add directional light for dramatic lighting
-  const directionalLight = useRef()
-  const ambientLight = useRef()
-
   useFrame(({ clock }) => {
     const rotationFactor = 0.5
     myMesh.current.rotation.y =
       Math.PI / 1 + Math.tan(clock.getElapsedTime() * rotationFactor)
-
-    // Update directional light position
-    directionalLight.current.position.x = Math.sin(clock.getElapsedTime())
-    directionalLight.current.position.z = Math.cos(clock.getElapsedTime())
   })
   return (
     <group {...props} dispose={null}>
-      {/* Add directional light */}
-      <directionalLight
-        ref={directionalLight}
-        intensity={0.8} // Adjust light intensity
-        color="white" // Light color
-        position={[0, 20, 0]} // Light position
-        castShadow // Enable shadow casting
-      />
-      {/* Add ambient light */}
-      <ambientLight
-        ref={ambientLight}
-        intensity={0.5} // Adjust ambient light intensity
-        color="white" // Light color
-      />
       <mesh
         ref={myMesh}
         castShadow
@@ -53,7 +31,7 @@ export function Moppu(props) {
         geometry={nodes.Object_4.geometry}
         material={materials.Material}
         scale={[0.5, 0.5, 0.5]}
-        position={(0, 0, 0)} // trying to move model up to top of flex container
+        position={(0, 0, 0)}
       />
     </group>
   )
