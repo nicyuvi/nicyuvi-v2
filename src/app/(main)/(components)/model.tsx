@@ -8,10 +8,9 @@ Title: モップ
 */
 'use client'
 
-import React, { useRef, useState, useEffect } from 'react'
-import { useGLTF } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import { useFrame } from '@react-three/fiber'
+import { Loader, useGLTF } from '@react-three/drei'
+import { Canvas, useFrame } from '@react-three/fiber'
+import React, { Suspense, useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 
 export function Moppu(props) {
@@ -56,16 +55,21 @@ useGLTF.preload('models/scene.gltf')
 
 export default function Model() {
   return (
-    <Canvas>
-      <ambientLight intensity={0.5} />
-      <spotLight
-        position={[10, 10, 10]}
-        angle={0.15}
-        penumbra={1}
-        intensity={1}
-        castShadow
-      />
-      <Moppu />
-    </Canvas>
+    <>
+      <Canvas>
+        <Suspense fallback={null}>
+          <ambientLight intensity={0.5} />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.15}
+            penumbra={1}
+            intensity={1}
+            castShadow
+          />
+          <Moppu />
+        </Suspense>
+      </Canvas>
+      <Loader />
+    </>
   )
 }
