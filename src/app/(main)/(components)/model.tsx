@@ -41,7 +41,7 @@ export function Moppu(props) {
         receiveShadow
         geometry={nodes.Object_4.geometry}
         material={materials.Material}
-        scale={[0.5, 0.5, 0.5]}
+        scale={[0.7, 0.7, 0.7]}
         position={[
           -modelSize[0] / 2 + 1.5,
           -modelSize[1] / 2,
@@ -57,6 +57,18 @@ useGLTF.preload('models/scene.gltf')
 export default function Model() {
   return (
     <Canvas style={{ height: 'calc(100vh - 62px)' }}>
+      {/* Ambient light */}
+      <ambientLight intensity={0.5} />
+
+      {/* Spot light */}
+      <spotLight
+        position={[10, 10, 10]}
+        angle={0.15}
+        penumbra={1}
+        intensity={1}
+        castShadow
+      />
+
       <Moppu />
     </Canvas>
   )
