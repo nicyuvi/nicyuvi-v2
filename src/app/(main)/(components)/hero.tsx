@@ -4,10 +4,10 @@ export default function Hero() {
   return (
     <>
       <span className="font-semibold text-primary">Hi, my name is</span>
-      <h1 className="mb-4 text-3xl font-semibold text-foreground">
+      <h1 className="mb-4 text-3xl font-bold text-foreground md:text-6xl">
         Nicolis Yuvienco.
       </h1>
-      <h1 className="text-2xl font-semibold text-muted-foreground">
+      <h1 className="mb-2 text-3xl font-semibold text-muted-foreground md:text-5xl">
         I&apos;m a Full-Stack Engineer.
       </h1>
       <p className="mb-12 font-semibold text-muted-foreground">

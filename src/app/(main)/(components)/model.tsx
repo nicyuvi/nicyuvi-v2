@@ -12,7 +12,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { useFrame } from '@react-three/fiber'
-import * as THREE from 'three' // Import THREE
+import * as THREE from 'three'
 
 export function Moppu(props) {
   const { nodes, materials } = useGLTF('models/scene.gltf')
@@ -43,7 +43,7 @@ export function Moppu(props) {
         material={materials.Material}
         scale={[0.7, 0.7, 0.7]}
         position={[
-          -modelSize[0] / 2 + 1.5,
+          -modelSize[0] / 2 + 1.5, // move model left and right
           -modelSize[1] / 2,
           -modelSize[2] / 2,
         ]}
@@ -56,11 +56,8 @@ useGLTF.preload('models/scene.gltf')
 
 export default function Model() {
   return (
-    <Canvas style={{ height: 'calc(100vh - 62px)' }}>
-      {/* Ambient light */}
+    <Canvas>
       <ambientLight intensity={0.5} />
-
-      {/* Spot light */}
       <spotLight
         position={[10, 10, 10]}
         angle={0.15}
@@ -68,7 +65,6 @@ export default function Model() {
         intensity={1}
         castShadow
       />
-
       <Moppu />
     </Canvas>
   )
