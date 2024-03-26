@@ -8,20 +8,31 @@ Title: モップ
 */
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { useFrame } from '@react-three/fiber'
+import * as THREE from 'three' // Import THREE
 
 export function Moppu(props) {
   const { nodes, materials } = useGLTF('models/scene.gltf')
   const myMesh = useRef()
+  const [modelSize, setModelSize] = useState([0, 0, 0])
+
+  // Calculate model size and update state
+  useEffect(() => {
+    const boundingBox = new THREE.Box3().setFromObject(myMesh.current)
+    const size = new THREE.Vector3()
+    boundingBox.getSize(size)
+    setModelSize([size.x, size.y, size.z])
+  }, [])
 
   useFrame(({ clock }) => {
     const rotationFactor = 0.5
     myMesh.current.rotation.y =
       Math.PI / 1 + Math.tan(clock.getElapsedTime() * rotationFactor)
   })
+
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -31,7 +42,11 @@ export function Moppu(props) {
         geometry={nodes.Object_4.geometry}
         material={materials.Material}
         scale={[0.5, 0.5, 0.5]}
-        position={(0, 0, 0)}
+        position={[
+          -modelSize[0] / 2 + 1.5,
+          -modelSize[1] / 2,
+          -modelSize[2] / 2,
+        ]}
       />
     </group>
   )
@@ -41,7 +56,7 @@ useGLTF.preload('models/scene.gltf')
 
 export default function Model() {
   return (
-    <Canvas>
+    <Canvas style={{ height: 'calc(100vh - 62px)' }}>
       <Moppu />
     </Canvas>
   )

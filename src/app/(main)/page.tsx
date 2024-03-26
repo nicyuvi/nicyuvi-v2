@@ -14,7 +14,7 @@ export default function Home() {
         <MobileNav displayClass="md:hidden" />
       </header>
       <main className="container mt-[62px]">
-        <section className="flex h-[calc(100vh_-_62px)]">
+        <section className="flex h-[calc(100vh_-_62px)] items-center">
           <div className="w-3/5">
             <Hero />
           </div>
