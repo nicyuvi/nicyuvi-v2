@@ -7,7 +7,8 @@ type ExperienceCardProps = {
   role: string
   description: string
   techList: string[]
-  link?: string
+  link: string
+  target: string
 }
 
 export default function ExperienceCard({
@@ -17,6 +18,7 @@ export default function ExperienceCard({
   description,
   techList,
   link,
+  target,
 }: ExperienceCardProps) {
   return (
     <>
@@ -25,15 +27,15 @@ export default function ExperienceCard({
           {dates}
         </span>
         <Link
-          href={link || '/'}
-          target={link ? '_blank' : '_self'}
+          href={link}
+          target={target}
           className="flex items-center transition hover:-translate-y-0.5 hover:text-primary"
         >
           <h2 className="mr-2 text-2xl">{company}</h2>
           <ExternalLink />
         </Link>
         <div />
-        <Link href={link || '/'} target={link ? '_blank' : '_self'}>
+        <Link href={link} target={target}>
           <span className="mb-4 block text-muted-foreground">{role}</span>
           <p className="mb-1 rounded bg-primary p-2">{description}</p>
           {techList.map((tech, index) => (
