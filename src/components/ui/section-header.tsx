@@ -25,12 +25,15 @@ const sectionHeaderVariants = cva(
 
 export interface SectionHeaderProps
   extends React.HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof sectionHeaderVariants> {}
+    VariantProps<typeof sectionHeaderVariants> {
+  children: React.ReactNode
+}
 
 export default function SectionHeader({
   className,
   variant,
   size,
+  children,
   ...props
 }: SectionHeaderProps) {
   return (
@@ -38,7 +41,7 @@ export default function SectionHeader({
       className={sectionHeaderVariants({ variant, size, className })}
       {...props}
     >
-      header
+      {children}
     </h2>
   )
 }

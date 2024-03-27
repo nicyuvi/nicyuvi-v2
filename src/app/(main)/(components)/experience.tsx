@@ -80,7 +80,7 @@ export default function Experience() {
 
   return (
     <>
-      <SectionHeader variant="center" />
+      <SectionHeader variant="center">Experience</SectionHeader>
       <div className="mb-10">
         <ExperienceCard
           dates={curr.dates}
