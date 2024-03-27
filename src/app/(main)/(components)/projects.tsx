@@ -19,7 +19,7 @@ export default function Projects() {
         <Link
           href="https://doer.netlify.app/"
           target="_blank"
-          className="mr-8 w-1/2"
+          className="sm:mr-8 sm:w-1/2"
         >
           <Image
             src={`/static/doer-img.png`}
@@ -29,7 +29,7 @@ export default function Projects() {
             className="rounded"
           />
         </Link>
-        <div className="w-1/2">
+        <div className="sm:w-1/2">
           <span className="block text-right text-primary">
             Featured Project
           </span>

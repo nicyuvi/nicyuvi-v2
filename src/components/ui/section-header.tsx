@@ -2,7 +2,7 @@ import React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 
 const sectionHeaderVariants = cva(
-  'max-w-sm border-b border-b-primary pb-2 mb-10',
+  'max-w-sm border-b border-b-primary pb-2 mb-10 font-bold',
   {
     variants: {
       variant: {
