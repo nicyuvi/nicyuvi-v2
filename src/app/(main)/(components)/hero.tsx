@@ -19,9 +19,11 @@ export default function Hero() {
         <Button className="mb-4" variant="outline">
           {'get in touch'.toUpperCase()}
         </Button>
-        <Button variant="outline">
-          <Link href="#experience">{'view my work'.toUpperCase()}</Link>
-        </Button>
+        <Link href="#experience">
+          <Button variant="outline" className="w-full">
+            {'view my work'.toUpperCase()}
+          </Button>
+        </Link>
       </div>
     </>
   )

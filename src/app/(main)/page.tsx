@@ -22,7 +22,7 @@ export default function Home() {
             <Model />
           </div>
         </section>
-        <section id="experience" className="mb-4 pt-16">
+        <section id="experience" className="mb-4 pt-20">
           <Experience />
         </section>
         <section id="projecs">Projects</section>
