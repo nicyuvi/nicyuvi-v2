@@ -74,10 +74,6 @@ export default function Experience() {
     target: '_blank',
   }
 
-  // <h2 className="mx-auto mb-10 max-w-sm border-b border-b-primary pb-2 text-center text-3xl">
-  //   Experience
-  // </h2>
-
   return (
     <>
       <SectionHeader variant="center">Experience</SectionHeader>
