@@ -13,12 +13,12 @@ export default function Home() {
         <NavBar displayClass="hidden md:block" />
         <MobileNav displayClass="md:hidden" />
       </header>
-      <main className="container mt-[calc(1rem_+_62px)]">
-        <section className="flex h-[calc(100vh_-_62px)] min-h-0 flex-col items-center md:flex-row">
+      <main className="container mt-20">
+        <section className="flex h-[calc(100vh_-_4rem)] min-h-0 flex-col items-center md:flex-row">
           <div className="md:w-3/5">
             <Hero />
           </div>
-          <div className="w-full md:h-[calc(100vh_-_62px)] md:w-2/5">
+          <div className="w-full md:h-[calc(100vh_-_4rem)] md:w-2/5">
             <Model />
           </div>
         </section>

@@ -10,7 +10,7 @@ type NavBarProps = {
 export default function NavBar({ displayClass }: NavBarProps) {
   return (
     <nav
-      className={`${displayClass} fixed left-0 right-0 top-0 z-10 py-2 shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] backdrop-blur`}
+      className={`${displayClass} fixed left-0 right-0 top-0 z-10 h-16 py-2 shadow-[rgba(0,0,0,0.2)_0px_5px_10px_0px] backdrop-blur`}
     >
       <div className="container flex justify-between">
         <Link href="/" className="flex items-center">
