@@ -1,3 +1,5 @@
+import { ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 import ExperienceCard from './experience-card'
 
 export default function Experience() {
@@ -103,6 +105,14 @@ export default function Experience() {
           link={freelanceWebDev.link}
         />
       </div>
+      <Link
+        className="flex items-center justify-end transition hover:-translate-y-0.5 hover:text-primary"
+        href="/Yuvienco_-_Full_Stack_Engineer_Resume_v.1.pdf"
+        target="_blank"
+      >
+        <span className="mr-2">View Full Resume</span>
+        <ExternalLink />
+      </Link>
     </>
   )
 }
