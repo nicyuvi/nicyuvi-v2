@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -18,7 +19,9 @@ export default function Hero() {
         <Button className="mb-4" variant="outline">
           {'get in touch'.toUpperCase()}
         </Button>
-        <Button variant="outline">{'view my work'.toUpperCase()}</Button>
+        <Button variant="outline">
+          <Link href="#experience">{'view my work'.toUpperCase()}</Link>
+        </Button>
       </div>
     </>
   )

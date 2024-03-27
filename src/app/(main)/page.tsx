@@ -22,12 +22,12 @@ export default function Home() {
             <Model />
           </div>
         </section>
-        <section id="#experience" className="mb-4">
+        <section id="experience" className="mb-4 pt-16">
           <Experience />
         </section>
-        <section id="#projecs">Projects</section>
-        <section id="#about">About</section>
-        <section id="#contact">Contact</section>
+        <section id="projecs">Projects</section>
+        <section id="about">About</section>
+        <section id="contact">Contact</section>
       </main>
       <aside>
         <SideNav />
