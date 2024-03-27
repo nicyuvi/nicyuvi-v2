@@ -16,13 +16,19 @@ export default function Projects() {
     <>
       <SectionHeader>Some of My Projects</SectionHeader>
       <div className="sm:flex">
-        <Image
-          src={`/static/doer-img.png`}
-          alt="doer thumbnail"
-          width="500"
-          height="500"
+        <Link
+          href="https://doer.netlify.app/"
+          target="_blank"
           className="mr-8 w-1/2"
-        />
+        >
+          <Image
+            src={`/static/doer-img.png`}
+            alt="doer thumbnail"
+            width="500"
+            height="500"
+            className="rounded"
+          />
+        </Link>
         <div className="w-1/2">
           <span className="block text-right text-primary">
             Featured Project
