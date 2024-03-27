@@ -1,0 +1,11 @@
+Model Information:
+* title:	モップ
+* source:	https://sketchfab.com/3d-models/7017ab8380264623a3765cfda1e60df8
+* author:	borobon (https://sketchfab.com/borobon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "モップ" (https://sketchfab.com/3d-models/7017ab8380264623a3765cfda1e60df8) by borobon (https://sketchfab.com/borobon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

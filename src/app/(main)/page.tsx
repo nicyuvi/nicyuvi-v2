@@ -4,6 +4,7 @@ import SideNav from '@/components/layout/side-nav'
 import { Button } from '@/components/ui/button'
 import Hero from './(components)/hero'
 import Experience from './(components)/experience'
+import Model from './(components)/model'
 
 export default function Home() {
   return (
@@ -12,16 +13,21 @@ export default function Home() {
         <NavBar displayClass="hidden md:block" />
         <MobileNav displayClass="md:hidden" />
       </header>
-      <main className="container mt-[62px]">
-        <section className="mx-auto flex h-[calc(100vh_-_62px)] flex-col justify-center">
-          <Hero />
+      <main className="container mt-20">
+        <section className="flex h-[calc(100vh_-_4rem)] min-h-0 flex-col items-center md:flex-row">
+          <div className="md:w-3/5">
+            <Hero />
+          </div>
+          <div className="w-full md:h-[calc(100vh_-_4rem)] md:w-2/5">
+            <Model />
+          </div>
         </section>
-        <section id="#experience" className="mb-4">
+        <section id="experience" className="mb-4 pt-20">
           <Experience />
         </section>
-        <section id="#projecs">Projects</section>
-        <section id="#about">About</section>
-        <section id="#contact">Contact</section>
+        <section id="projecs">Projects</section>
+        <section id="about">About</section>
+        <section id="contact">Contact</section>
       </main>
       <aside>
         <SideNav />
