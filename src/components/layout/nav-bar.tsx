@@ -15,7 +15,7 @@ export default function NavBar({ displayClass }: NavBarProps) {
       <div className="container flex justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src={`/brand-logo.png`}
+            src={`/static/brand-logo.png`}
             alt="brand logo"
             width="40"
             height="40"
