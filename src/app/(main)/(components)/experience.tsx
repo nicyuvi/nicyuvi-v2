@@ -1,6 +1,7 @@
 import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import ExperienceCard from './experience-card'
+import SectionHeader from '@/components/ui/section-header'
 
 export default function Experience() {
   const curr = {
@@ -73,11 +74,13 @@ export default function Experience() {
     target: '_blank',
   }
 
+  // <h2 className="mx-auto mb-10 max-w-sm border-b border-b-primary pb-2 text-center text-3xl">
+  //   Experience
+  // </h2>
+
   return (
     <>
-      <h2 className="mx-auto mb-10 max-w-sm border-b border-b-primary pb-2 text-center text-2xl">
-        Experience
-      </h2>
+      <SectionHeader variant="center" />
       <div className="mb-10">
         <ExperienceCard
           dates={curr.dates}
