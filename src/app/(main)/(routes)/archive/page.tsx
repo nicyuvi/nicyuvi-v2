@@ -63,7 +63,7 @@ export default function Component() {
         <div className="w-full max-w-6xl space-y-2">
           <div className="flex items-center text-primary">
             <Link href="/" className="group flex cursor-pointer items-center">
-              <ArrowLeft className="transform transition-transform duration-300 group-hover:-translate-x-1" />
+              <ArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
               <span>back</span>
             </Link>
           </div>

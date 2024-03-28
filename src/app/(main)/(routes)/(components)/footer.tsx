@@ -12,7 +12,7 @@ export default function Footer() {
           alt="brand logo"
           width="40"
           height="40"
-          className="transform transition-transform duration-300 hover:-translate-y-1"
+          className="transition-transform duration-300 hover:-translate-y-1"
         />
       </Link>
       <div>
