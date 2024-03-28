@@ -1,6 +1,9 @@
 import SectionHeader from '@/components/ui/section-header'
 import FeaturedProject from './featured-project'
 
+const newLocal = `
+      An E-Commerce web page for Felix's Footwear shoe company featuring Contentful CMS to display product data, shopping cart, functionality, local storage to save cart data, modals, and modal popups complete with body scroll lock, form validation and form handling, dynamic JavaScript components, ES6 modules and classes, and a full production build using Webpack.
+    `
 export default function Projects() {
   const doer = {
     projectLink: 'https://doer.netlify.app/',
@@ -41,6 +44,28 @@ export default function Projects() {
     ],
   }
 
+  const felixFootwear = {
+    projectLink: 'https://ecommerce-yuvi.netlify.app/',
+    githubLink: 'https://github.com/nicyuvi/e-commerce-website',
+    image: '/static/ecommerce-img.png',
+    title: "Felix's Footwear",
+    description: `
+      An E-Commerce web page for Felix's Footwear shoe company featuring Contentful CMS to display 
+      product data, shopping cart, functionality, local storage to save cart data, modals, and modal 
+      popups complete with body scroll lock, form validation and form handling, dynamic JavaScript 
+      components, ES6 modules and classes, and a full production build using Webpack.
+    `,
+    techList: [
+      'HTML5',
+      'Tailwind CSS',
+      'JavaScript',
+      'Splide JS',
+      'Body Scroll Lock',
+      'Contentful CMS',
+      'Webpack',
+    ],
+  }
+
   return (
     <>
       <SectionHeader>Some of My Projects</SectionHeader>
@@ -65,6 +90,14 @@ export default function Projects() {
           inverted
         />
       </div>
+      <FeaturedProject
+        projectLink={felixFootwear.projectLink}
+        githubLink={felixFootwear.githubLink}
+        image={felixFootwear.image}
+        title={felixFootwear.title}
+        description={felixFootwear.description}
+        techList={felixFootwear.techList}
+      />
     </>
   )
 }
