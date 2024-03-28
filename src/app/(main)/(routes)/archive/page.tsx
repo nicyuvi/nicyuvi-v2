@@ -16,15 +16,47 @@ type Project = {
   github: string
 }
 
+const projects: Project[] = [
+  {
+    name: 'Happy Pets Landing Page',
+    techList: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://happypetslandingpage.netlify.app/',
+    github: 'https://github.com/nicyuvi/happy-pets-landing-page',
+  },
+  {
+    name: "A Surfer's Life Blog",
+    techList: ['HTML', 'CSS'],
+    link: 'https://surferslife.netlify.app/',
+    github: 'https://github.com/nicyuvi/surfers-life-blog',
+  },
+  {
+    name: 'JavaScript Drumset',
+    techList: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://myjsdrumset.netlify.app/',
+    github:
+      'https://github.com/nicyuvi/my-javascript-30/tree/main/01-js-drumkit',
+  },
+  {
+    name: 'Cozy Cabins Landing Page',
+    techList: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://cozycabinretreat.netlify.app/',
+    github: 'https://github.com/nicyuvi/cozy-cabin-landing-page',
+  },
+  {
+    name: 'Interactive Pricing Component',
+    techList: ['React'],
+    link: 'https://interactive-pricing-component-yuvi.netlify.app/',
+    github: 'https://github.com/nicyuvi/interactive-pricing-component-solution',
+  },
+  {
+    name: 'Promotional HTML Email Template',
+    techList: ['HTML', 'CSS'],
+    link: 'https://promotional-email-template.netlify.app/',
+    github: 'https://github.com/nicyuvi/promotional-email-template',
+  },
+]
+
 export default function Component() {
-  const projects: Project[] = [
-    {
-      name: 'Happy Pets Landing Page',
-      techList: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://happypetslandingpage.netlify.app/',
-      github: 'https://github.com/nicyuvi/happy-pets-landing-page',
-    },
-  ]
   return (
     <div className="flex flex-col gap-4 p-4 md:gap-8 md:p-6">
       <div className="container mx-auto">
