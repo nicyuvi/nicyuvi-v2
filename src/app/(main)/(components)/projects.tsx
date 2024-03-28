@@ -22,17 +22,49 @@ export default function Projects() {
     ],
   }
 
+  const wheelsLandingPage = {
+    projectLink: 'https://wheelslandingpage.netlify.app/',
+    githubLink: 'https://github.com/nicyuvi/wheels-landing-page',
+    image: '/static/wheels-img.png',
+    title: 'Wheels Landing Page',
+    description: `
+      A landing page for the Wheels ridesharing company featuring mobile first design and responsive UI, 
+      local restaurant information, form validation and form handling, dynamic JavaScript components, and ES6 modules.
+    `,
+    techList: [
+      'HTML5',
+      'SASS',
+      'JavaScript',
+      'Splide JS',
+      'US Restaurant Menus API',
+      'Webpack',
+    ],
+  }
+
   return (
     <>
       <SectionHeader>Some of My Projects</SectionHeader>
-      <FeaturedProject
-        projectLink={doer.projectLink}
-        githubLink={doer.githubLink}
-        image={doer.image}
-        title={doer.title}
-        description={doer.description}
-        techList={doer.techList}
-      />
+      <div className="mb-20">
+        <FeaturedProject
+          projectLink={doer.projectLink}
+          githubLink={doer.githubLink}
+          image={doer.image}
+          title={doer.title}
+          description={doer.description}
+          techList={doer.techList}
+        />
+      </div>
+      <div className="mb-20">
+        <FeaturedProject
+          projectLink={wheelsLandingPage.projectLink}
+          githubLink={wheelsLandingPage.githubLink}
+          image={wheelsLandingPage.image}
+          title={wheelsLandingPage.title}
+          description={wheelsLandingPage.description}
+          techList={wheelsLandingPage.techList}
+          inverted
+        />
+      </div>
     </>
   )
 }
