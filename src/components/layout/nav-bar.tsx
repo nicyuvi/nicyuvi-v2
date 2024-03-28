@@ -19,7 +19,7 @@ export default function NavBar({ displayClass }: NavBarProps) {
             alt="brand logo"
             width="40"
             height="40"
-            className="mr-2 h-auto w-auto"
+            className="mr-2"
           />
           <span className="font-bold">Nicolis Yuvienco</span>
         </Link>
