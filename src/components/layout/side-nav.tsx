@@ -32,7 +32,7 @@ const socialIcons: SocialIcon[] = [
 
 export default function SideNav() {
   return (
-    <nav className="fixed right-4 top-1/2">
+    <nav className="right-4 top-1/2 hidden sm:fixed sm:block">
       <ul className="flex flex-col gap-4">
         {socialIcons.map((socialIcon, index) => (
           <li
