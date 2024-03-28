@@ -89,7 +89,7 @@ export default function Projects() {
           inverted
         />
       </div>
-      <div className="mb-8">
+      <div className="mb-16">
         <FeaturedProject
           projectLink={felixFootwear.projectLink}
           githubLink={felixFootwear.githubLink}
@@ -99,8 +99,10 @@ export default function Projects() {
           techList={felixFootwear.techList}
         />
       </div>
-      <Link className="flex items-center justify-end" href="/archive">
-        <Button variant="outline">View Project Archive</Button>
+      <Link className="flex items-center justify-center" href="/archive">
+        <Button className="w-1/2" variant="outline">
+          View Project Archive
+        </Button>
       </Link>
     </>
   )

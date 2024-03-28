@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { AppWindow, Code, ExternalLink } from 'lucide-react'
+import { AppWindow, ArrowLeft, Code, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 
 type Project = {
@@ -61,9 +61,16 @@ export default function Component() {
     <div className="flex flex-col gap-4 p-4 md:gap-8 md:p-6">
       <div className="container mx-auto">
         <div className="w-full max-w-6xl space-y-2">
+          <div className="flex items-center text-primary">
+            <Link href="/" className="group flex cursor-pointer items-center">
+              <ArrowLeft className="transform transition-transform duration-300 group-hover:-translate-x-1" />
+              <span>back</span>
+            </Link>
+          </div>
+
           <div className="mb-8 flex items-center gap-4">
             <AppWindow />
-            <h1 className="text-2xl font-bold leading-none">All Projects</h1>
+            <h1 className="text-4xl font-bold leading-none">All Projects</h1>
           </div>
           <div className="overflow-hidden rounded-lg border shadow-sm">
             <Table>
