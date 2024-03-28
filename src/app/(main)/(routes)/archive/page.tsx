@@ -1,34 +1,28 @@
 import {
-  TableHead,
-  TableRow,
-  TableHeader,
-  TableCell,
-  TableBody,
   Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from '@/components/ui/table'
+import { AppWindow, Code, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
-import { AppWindow } from 'lucide-react'
-
-type Link = {
-  name: string
-  href: string
-}
 
 type Project = {
   name: string
   techList: string[]
-  link: Link
+  link: string
+  github: string
 }
 
 export default function Component() {
   const projects: Project[] = [
     {
-      name: 'name',
-      techList: ['tech one', 'tech two', 'tech three'],
-      link: {
-        name: 'google.com',
-        href: 'https://google.com',
-      },
+      name: 'Happy Pets Landing Page',
+      techList: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://happypetslandingpage.netlify.app/',
+      github: 'https://github.com/nicyuvi/happy-pets-landing-page',
     },
   ]
   return (
@@ -43,9 +37,10 @@ export default function Component() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[150px]">Project</TableHead>
-                  <TableHead>Built with</TableHead>
-                  <TableHead>Link</TableHead>
+                  <TableHead className="w-1/3">Project</TableHead>
+                  <TableHead className="w-1/3">Built with</TableHead>
+                  <TableHead className="w-1/6">Link</TableHead>
+                  <TableHead className="w-1/6">Github</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -62,8 +57,13 @@ export default function Component() {
                       ))}
                     </TableCell>
                     <TableCell>
-                      <Link href={project.link.href} target="_blank">
-                        {project.link.name}
+                      <Link href={project.link} target="_blank">
+                        <ExternalLink />
+                      </Link>
+                    </TableCell>
+                    <TableCell>
+                      <Link href={project.github} target="_blank">
+                        <Code />
                       </Link>
                     </TableCell>
                   </TableRow>
