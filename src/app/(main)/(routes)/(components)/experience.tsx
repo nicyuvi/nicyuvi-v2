@@ -1,3 +1,7 @@
+import { Button } from '@/components/ui/button'
+import SectionHeader from '@/components/ui/section-header'
+import { ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 import ExperienceCard from './experience-card'
 
 export default function Experience() {
@@ -17,7 +21,8 @@ export default function Experience() {
       'Python',
       'Flask',
     ],
-    link: 'https://notehub-landing.vercel.app/',
+    link: '/#projects',
+    target: '_self',
   }
 
   const lensabl = {
@@ -44,6 +49,7 @@ export default function Experience() {
       'Magento',
     ],
     link: 'https://lensabl.com',
+    target: '_blank',
   }
 
   const freelanceWebDev = {
@@ -66,13 +72,12 @@ export default function Experience() {
       'Netlify',
     ],
     link: 'https://www.arclogistix.com/',
+    target: '_blank',
   }
 
   return (
     <>
-      <h2 className="mx-auto mb-10 max-w-sm border-b border-b-primary pb-2 text-center text-2xl">
-        Experience
-      </h2>
+      <SectionHeader variant="center">Experience</SectionHeader>
       <div className="mb-10">
         <ExperienceCard
           dates={curr.dates}
@@ -81,6 +86,7 @@ export default function Experience() {
           description={curr.description}
           techList={curr.techList}
           link={curr.link}
+          target={curr.target}
         />
       </div>
       <div className="mb-10">
@@ -91,6 +97,7 @@ export default function Experience() {
           description={lensabl.description}
           techList={lensabl.techList}
           link={lensabl.link}
+          target={lensabl.target}
         />
       </div>
       <div className="mb-10">
@@ -101,8 +108,19 @@ export default function Experience() {
           description={freelanceWebDev.description}
           techList={freelanceWebDev.techList}
           link={freelanceWebDev.link}
+          target={freelanceWebDev.target}
         />
       </div>
+      <Link
+        className="flex items-center justify-end"
+        href="/static/Yuvienco_-_Full_Stack_Engineer_Resume_v.1.pdf"
+        target="_blank"
+      >
+        <Button variant="outline">
+          <span className="mr-2">View Full Resume</span>
+          <ExternalLink />
+        </Button>
+      </Link>
     </>
   )
 }

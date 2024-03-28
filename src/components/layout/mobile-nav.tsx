@@ -21,11 +21,11 @@ export default function MobileNav({ displayClass }: MobileNavProps) {
         <div className="container flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src={`/brand-logo.png`}
+              src={`/static/brand-logo.png`}
               alt="brand logo"
               width="40"
               height="40"
-              className="mr-2 h-auto w-auto"
+              className="mr-2"
             />
             <span className="font-bold">Nicolis Yuvienco</span>
           </Link>
