@@ -31,8 +31,6 @@ export default function Home() {
         <section id="projects" className="mb-4 pt-20">
           <Projects />
         </section>
-        <section id="about">About</section>
-        <section id="contact">Contact</section>
       </main>
       <aside>
         <SideNav />
@@ -40,9 +38,6 @@ export default function Home() {
       <footer>
         <p>footer</p>
       </footer>
-      <Button>test</Button>
-      <Button variant="secondary">secondary</Button>
-      <Button variant="outline">outline</Button>
     </>
   )
 }

@@ -1,7 +1,8 @@
+import { Button } from '@/components/ui/button'
+import SectionHeader from '@/components/ui/section-header'
 import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import ExperienceCard from './experience-card'
-import SectionHeader from '@/components/ui/section-header'
 
 export default function Experience() {
   const curr = {
@@ -111,12 +112,14 @@ export default function Experience() {
         />
       </div>
       <Link
-        className="flex items-center justify-end transition hover:-translate-y-0.5 hover:text-primary"
+        className="flex items-center justify-end"
         href="/static/Yuvienco_-_Full_Stack_Engineer_Resume_v.1.pdf"
         target="_blank"
       >
-        <span className="mr-2">View Full Resume</span>
-        <ExternalLink />
+        <Button variant="outline">
+          <span className="mr-2">View Full Resume</span>
+          <ExternalLink />
+        </Button>
       </Link>
     </>
   )
