@@ -9,12 +9,33 @@ import {
 import Link from 'next/link'
 import { AppWindow } from 'lucide-react'
 
+type Link = {
+  name: string
+  href: string
+}
+
+type Project = {
+  name: string
+  techList: string[]
+  link: Link
+}
+
 export default function Component() {
+  const projects: Project[] = [
+    {
+      name: 'name',
+      techList: ['tech one', 'tech two', 'tech three'],
+      link: {
+        name: 'google.com',
+        href: 'https://google.com',
+      },
+    },
+  ]
   return (
     <div className="flex flex-col gap-4 p-4 md:gap-8 md:p-6">
       <div className="container mx-auto">
         <div className="w-full max-w-6xl space-y-2">
-          <div className="flex items-center gap-4">
+          <div className="mb-8 flex items-center gap-4">
             <AppWindow />
             <h1 className="text-2xl font-bold leading-none">All Projects</h1>
           </div>
@@ -28,41 +49,25 @@ export default function Component() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">Next.js</TableCell>
-                  <TableCell>React</TableCell>
-                  <TableCell>
-                    <Link href="#">vercel.com</Link>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Shadcn</TableCell>
-                  <TableCell>Web Components</TableCell>
-                  <TableCell>
-                    <Link href="#">shadcn.com</Link>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Hyper</TableCell>
-                  <TableCell>Node.js</TableCell>
-                  <TableCell>
-                    <Link href="#">hyper.is</Link>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Comet</TableCell>
-                  <TableCell>Design System</TableCell>
-                  <TableCell>
-                    <Link href="#">comet.vercel.com</Link>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Vercel</TableCell>
-                  <TableCell>Cloud</TableCell>
-                  <TableCell>
-                    <Link href="#">vercel.com</Link>
-                  </TableCell>
-                </TableRow>
+                {projects.map((project, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="font-medium">
+                      {project.name}
+                    </TableCell>
+                    <TableCell>
+                      {project.techList.map((tech, index) => (
+                        <span key={index} className="mr-2">
+                          {tech}
+                        </span>
+                      ))}
+                    </TableCell>
+                    <TableCell>
+                      <Link href={project.link.href} target="_blank">
+                        {project.link.name}
+                      </Link>
+                    </TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           </div>
