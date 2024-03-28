@@ -1,9 +1,10 @@
 import MobileNav from '@/components/layout/mobile-nav'
 import NavBar from '@/components/layout/nav-bar'
+import SideNav from '@/components/layout/side-nav'
 import Experience from './(components)/experience'
+import Footer from './(components)/footer'
 import Hero from './(components)/hero'
 import Projects from './(components)/projects'
-import Footer from './(components)/footer'
 
 export default function Home() {
   return (
@@ -33,11 +34,9 @@ export default function Home() {
           <Projects />
         </section>
       </main>
-      {
-        // <aside>
-        //   <SideNav />
-        // </aside>
-      }
+      <aside>
+        <SideNav />
+      </aside>
       <footer className="mb-6">
         <Footer />
       </footer>
