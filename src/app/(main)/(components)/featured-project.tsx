@@ -24,7 +24,11 @@ export default function FeaturedProject({
   return (
     <>
       <div className="sm:flex">
-        <Link href={projectLink} target="_blank" className="sm:mr-8 sm:w-1/2">
+        <Link
+          href={projectLink}
+          target="_blank"
+          className={`${inverted && 'order-1 !mr-0'} sm:mr-8 sm:w-1/2`}
+        >
           <Image
             src={image}
             alt="doer thumbnail"
@@ -33,15 +37,23 @@ export default function FeaturedProject({
             className="rounded"
           />
         </Link>
-        <div className="sm:w-1/2">
-          <span className="block text-right text-primary">
+        <div className={`${inverted && 'mr-8'} sm:w-1/2`}>
+          <span
+            className={`${inverted && '!text-left'} block text-right text-primary`}
+          >
             Featured Project
           </span>
-          <h3 className="mb-2 text-right text-2xl">{title}</h3>
-          <p className="mb-1 rounded bg-primary p-2 text-right">
+          <h3
+            className={`${inverted && '!text-left'} mb-2 text-right text-2xl`}
+          >
+            {title}
+          </h3>
+          <p
+            className={`${inverted && '!text-left'} mb-1 rounded bg-primary p-2 text-right`}
+          >
             {description}
           </p>
-          <div className="mb-1 text-right">
+          <div className={`${inverted && '!text-left'} mb-1 text-right`}>
             {techList.map((tech, index) => (
               <span
                 key={index}
@@ -51,8 +63,7 @@ export default function FeaturedProject({
               </span>
             ))}
           </div>
-
-          <div className="flex justify-end">
+          <div className={`${inverted && '!justify-start'} flex justify-end`}>
             <Link href={githubLink} target="_blank">
               <Code className="mr-2" />
             </Link>
