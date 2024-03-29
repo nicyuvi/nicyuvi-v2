@@ -1,6 +1,7 @@
 import Experience from './(components)/experience'
 import Hero from './(components)/hero'
 import Projects from './(components)/projects'
+import Contact from './(components)/contact'
 
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
       </section>
       <section id="projects" className="pt-20">
         <Projects />
+      </section>
+      <section id="contact" className="pt-20">
+        <Contact />
       </section>
     </>
   )
