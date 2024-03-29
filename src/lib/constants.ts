@@ -3,8 +3,8 @@ type NavLink = {
   name: string
 }
 export const NAV_LINKS: NavLink[] = [
-  { href: '#experience', name: 'experience' },
-  { href: '#projects', name: 'projects' },
+  { href: '/#experience', name: 'experience' },
+  { href: '/#projects', name: 'projects' },
   { href: 'about', name: 'about' },
-  { href: 'contact', name: 'contact' },
+  { href: 'about', name: 'contact' },
 ]
