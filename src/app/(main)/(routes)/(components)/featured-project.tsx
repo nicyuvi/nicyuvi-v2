@@ -34,7 +34,7 @@ export default function FeaturedProject({
             alt="doer thumbnail"
             width="500"
             height="500"
-            className="rounded"
+            className="w-auto rounded"
           />
         </Link>
         <div className={`${inverted && 'mr-8'} sm:w-1/2`}>
