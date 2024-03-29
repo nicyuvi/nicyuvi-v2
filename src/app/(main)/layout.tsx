@@ -14,9 +14,9 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'Nicolis Yuvienco - Full-Stack Web Developer Portfolio',
+  title: 'Nicolis Yuvienco - Full-Stack Engineer Portfolio',
   description:
-    'Nicolis Yuvienco is a Full-Stack Web Developer that focuses on building exceptional websites and applications, using the latest technologies. ',
+    'Nicolis Yuvienco is a Full-Stack Engineer that focuses on building exceptional websites and applications, using the latest technologies. ',
 }
 
 export default function RootLayout({
