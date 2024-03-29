@@ -19,14 +19,14 @@ export default function NavBar({ displayClass }: NavBarProps) {
             alt="brand logo"
             width="40"
             height="40"
-            className="mr-2"
+            className="mr-2 w-auto"
           />
           <span className="font-bold">Nicolis Yuvienco</span>
         </Link>
         <ul className="flex items-center">
           {NAV_LINKS.map((link, index) => (
             <li key={index} className="mr-4">
-              <Link href={`#${link}`}>{link}</Link>
+              <Link href={link.href}>{link.name}</Link>
             </li>
           ))}
           <li>
