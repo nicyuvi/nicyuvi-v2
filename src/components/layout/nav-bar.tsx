@@ -26,7 +26,7 @@ export default function NavBar({ displayClass }: NavBarProps) {
         <ul className="flex items-center">
           {NAV_LINKS.map((link, index) => (
             <li key={index} className="mr-4">
-              <Link href={`#${link}`}>{link}</Link>
+              <Link href={link.href}>{link.name}</Link>
             </li>
           ))}
           <li>

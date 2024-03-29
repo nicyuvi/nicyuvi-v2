@@ -38,7 +38,7 @@ export default function MobileNav({ displayClass }: MobileNavProps) {
             <ul>
               {NAV_LINKS.map((link, index) => (
                 <li key={index} className="mb-4">
-                  <Link href={`#${link}`}>{link}</Link>
+                  <Link href={link.href}>{link.name}</Link>
                 </li>
               ))}
               <li>
