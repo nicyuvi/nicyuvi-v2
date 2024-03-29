@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
-// import { createNote } from '@/actions/create/create-note'
+import { sendEmail } from '@/actions/send-email'
 import SectionHeader from '@/components/ui/section-header'
 import { Textarea } from '@/components/ui/textarea'
 import { useRouter } from 'next/navigation'
@@ -44,7 +44,7 @@ export default function Contact() {
 
   const action: () => void = form.handleSubmit(async (data) => {
     console.log('data', data)
-    // const response = await createNote(data)
+    const response = await sendEmail(data)
     // if (response.error) {
     //   alert(response.error)
     // } else {
