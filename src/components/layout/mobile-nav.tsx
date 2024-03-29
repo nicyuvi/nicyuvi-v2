@@ -25,7 +25,7 @@ export default function MobileNav({ displayClass }: MobileNavProps) {
               alt="brand logo"
               width="40"
               height="40"
-              className="mr-2"
+              className="mr-2 w-auto"
             />
             <span className="font-bold">Nicolis Yuvienco</span>
           </Link>
@@ -33,7 +33,7 @@ export default function MobileNav({ displayClass }: MobileNavProps) {
             <Menu />
           </i>
         </div>
-        <div className="flex justify-center">
+        <div className="z-10 flex justify-center">
           {active && (
             <ul>
               {NAV_LINKS.map((link, index) => (
