@@ -1,6 +1,7 @@
 'use server'
-import * as z from 'zod'
 import { sendMail } from '@/services/mailService'
+import * as z from 'zod'
+import { ZodIssue } from 'zod'
 
 type FormData = {
   name: string
@@ -19,7 +20,6 @@ export async function sendEmail(formData: FormData) {
     message: z.string().min(15).max(255),
   })
 
-  // safe parse so we can handle errors when validation fails
   const parse = schema.safeParse({
     name,
     email,
@@ -28,7 +28,14 @@ export async function sendEmail(formData: FormData) {
   })
 
   if (!parse.success) {
-    return { error: 'Failed to parse email data' }
+    const res = parse.error.flatten((issue: ZodIssue) => ({
+      message: issue.message,
+      errorCode: issue.code,
+    }))
+
+    console.error('form errors', res.formErrors)
+    console.error('field errors', res.fieldErrors)
+    throw new Error()
   }
 
   const data = parse.data
@@ -40,8 +47,6 @@ export async function sendEmail(formData: FormData) {
 
   try {
     await sendMail(data.subject, body)
-    // revalidate path '/'
-    // TODO: modal confirmation popup maybe
   } catch (err) {
     if (err instanceof Error) {
       throw new Error(err.message)

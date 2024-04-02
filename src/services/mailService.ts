@@ -5,8 +5,7 @@ export function sendMail(subject: string, message: string): Promise<any> {
     service: 'gmail',
     auth: {
       user: process.env.NODEMAILER_EMAIL,
-      // pass: process.env.NODEMAILER_PW,
-      pass: '',
+      pass: process.env.NODEMAILER_PW,
     },
   })
 

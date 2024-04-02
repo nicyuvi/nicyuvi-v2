@@ -1,4 +1,5 @@
 'use client'
+import { sendEmail } from '@/actions/send-email'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -9,16 +10,13 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import SectionHeader from '@/components/ui/section-header'
+import { Textarea } from '@/components/ui/textarea'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
-import { sendEmail } from '@/actions/send-email'
-import SectionHeader from '@/components/ui/section-header'
-import { Textarea } from '@/components/ui/textarea'
-import { useRouter } from 'next/navigation'
 
 export default function Contact() {
-  const router = useRouter()
   const formSchema = z.object({
     name: z.string().min(1).max(50),
     email: z.string().min(1).max(50),
@@ -43,14 +41,8 @@ export default function Contact() {
   })
 
   const action: () => void = form.handleSubmit(async (data) => {
-    console.log('CLIENT data', data)
-    const response = await sendEmail(data)
-    // if (response.error) {
-    //   alert(response.error)
-    // } else {
-    //   alert(response.success)
-    //   router.push('/')
-    // }
+    await sendEmail(data)
+    form.reset()
   })
 
   return (
