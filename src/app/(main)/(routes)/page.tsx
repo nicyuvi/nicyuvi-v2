@@ -1,7 +1,8 @@
+import Contact from './(components)/contact'
 import Experience from './(components)/experience'
 import Hero from './(components)/hero'
+import Model from './(components)/model'
 import Projects from './(components)/projects'
-import Contact from './(components)/contact'
 
 export default function Home() {
   return (
@@ -11,9 +12,7 @@ export default function Home() {
           <Hero />
         </div>
         <div className="w-full md:h-[calc(100vh_-_4rem)] md:w-2/5">
-          {
-            //<Model />
-          }
+          <Model />
         </div>
       </section>
       <section id="experience" className="pt-20">
