@@ -4,6 +4,7 @@ import * as z from 'zod'
 import { ZodIssue } from 'zod'
 
 type FormData = {
+  honey_pot?: any
   name: string
   email: string
   subject: string
@@ -11,7 +12,10 @@ type FormData = {
 }
 
 export async function sendEmail(formData: FormData) {
-  const { name, email, subject, message } = formData
+  const { honey_pot, name, email, subject, message } = formData
+  if (honey_pot !== '') {
+    throw new Error('Spam submission')
+  }
 
   const schema = z.object({
     name: z.string().min(1).max(50),

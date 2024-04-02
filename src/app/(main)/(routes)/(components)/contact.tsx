@@ -19,6 +19,7 @@ import * as z from 'zod'
 
 export default function Contact() {
   const formSchema = z.object({
+    honey_pot: z.any(),
     name: z.string().min(1).max(50),
     email: z.string().min(1).max(50),
     subject: z.string().min(1).max(50),
@@ -34,6 +35,7 @@ export default function Contact() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      honey_pot: '',
       name: '',
       email: '',
       subject: '',
@@ -43,6 +45,7 @@ export default function Contact() {
   const { isSubmitting } = form.formState
 
   const action: () => void = form.handleSubmit(async (data) => {
+    console.log('look for honey', data)
     await sendEmail(data)
     form.reset()
   })
@@ -53,6 +56,19 @@ export default function Contact() {
       <Form {...form}>
         <form action={action}>
           <div className="sm:flex">
+            <FormField
+              control={form.control}
+              name="honey_pot"
+              render={({ field }) => (
+                <FormItem className="absolute -left-full">
+                  <FormLabel>Leave this field blank</FormLabel>
+                  <FormControl>
+                    <Input tabIndex="-1" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             <FormField
               control={form.control}
               name="name"
