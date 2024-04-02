@@ -100,7 +100,7 @@ export default function Projects() {
         />
       </div>
       <Link className="flex items-center justify-center" href="/archive">
-        <Button className="w-1/2" variant="outline">
+        <Button className="w-1/2 px-4" variant="outline">
           View Project Archive
         </Button>
       </Link>
