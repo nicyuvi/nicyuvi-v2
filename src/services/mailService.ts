@@ -1,7 +1,6 @@
-// @ts-nocheck
 import { createTransport } from 'nodemailer'
 
-export function sendMail(subject, message) {
+export function sendMail(subject: string, message: string): Promise<any> {
   const transporter = createTransport({
     service: 'gmail',
     auth: {

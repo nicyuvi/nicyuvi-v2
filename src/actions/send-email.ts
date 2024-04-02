@@ -40,9 +40,11 @@ export async function sendEmail(formData: FormData) {
 
   try {
     await sendMail(data.subject, body)
-  } catch ({ message }: any) {
-    // @ts-ignore
-    throw new Error(message)
-    // console.log('error world', err)
+    // revalidate path '/'
+    // TODO: modal confirmation popup maybe
+  } catch (err) {
+    if (err instanceof Error) {
+      throw new Error(err.message)
+    }
   }
 }
