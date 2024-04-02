@@ -6,7 +6,8 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { AppWindow, ArrowLeft, Code, ExternalLink } from 'lucide-react'
+import { SiGithub } from '@icons-pack/react-simple-icons'
+import { AppWindow, ArrowLeft, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 
 type Project = {
@@ -98,7 +99,7 @@ export default function Component() {
                 </TableCell>
                 <TableCell>
                   <Link href={project.github} target="_blank">
-                    <Code />
+                    <SiGithub />
                   </Link>
                 </TableCell>
               </TableRow>

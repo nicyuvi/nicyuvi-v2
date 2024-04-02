@@ -1,6 +1,7 @@
 import { Code, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { SiGithub } from '@icons-pack/react-simple-icons'
 
 type FeaturedProjectProps = {
   projectLink: string
@@ -65,7 +66,7 @@ export default function FeaturedProject({
           </div>
           <div className={`${inverted && '!justify-start'} flex justify-end`}>
             <Link href={githubLink} target="_blank">
-              <Code className="mr-2" />
+              <SiGithub className="mr-2" />
             </Link>
             <Link href={projectLink} target="_blank">
               <ExternalLink />
