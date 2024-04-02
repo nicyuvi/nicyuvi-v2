@@ -24,8 +24,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // suppressHydrationWarning recommended with next-themes
+  // https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',

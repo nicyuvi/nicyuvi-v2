@@ -16,9 +16,11 @@ export default function Hero() {
         technologies.
       </p>
       <div className="flex flex-col">
-        <Button className="mb-4" variant="outline">
-          {'get in touch'.toUpperCase()}
-        </Button>
+        <Link href="#contact">
+          <Button className="mb-4 w-full" variant="outline">
+            {'get in touch'.toUpperCase()}
+          </Button>
+        </Link>
         <Link href="#experience">
           <Button variant="outline" className="w-full">
             {'view my work'.toUpperCase()}
