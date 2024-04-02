@@ -13,6 +13,7 @@ import { Input } from '@/components/ui/input'
 import SectionHeader from '@/components/ui/section-header'
 import { Textarea } from '@/components/ui/textarea'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Loader2 } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
@@ -39,6 +40,7 @@ export default function Contact() {
       message: '',
     },
   })
+  const { isSubmitting } = form.formState
 
   const action: () => void = form.handleSubmit(async (data) => {
     await sendEmail(data)
@@ -105,9 +107,16 @@ export default function Contact() {
             )}
           />
           <div className="flex justify-center">
-            <Button type="submit" variant="outline">
-              Contact Me
-            </Button>
+            {isSubmitting ? (
+              <Button disabled>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Please wait
+              </Button>
+            ) : (
+              <Button type="submit" variant="outline">
+                Contact Me
+              </Button>
+            )}
           </div>
         </form>
       </Form>
