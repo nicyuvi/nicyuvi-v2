@@ -37,11 +37,12 @@ export async function sendEmail(formData: FormData) {
     email: ${data.email},
     body: ${data.message}
   `
-  await sendMail(data.subject, body)
 
-  // try {
-  //   return 'sent email'
-  // } catch (e) {
-  //   return 'error send'
-  // }
+  try {
+    await sendMail(data.subject, body)
+  } catch ({ message }: any) {
+    // @ts-ignore
+    throw new Error(message)
+    // console.log('error world', err)
+  }
 }
