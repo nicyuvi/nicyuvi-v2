@@ -1,7 +1,6 @@
 'use server'
 import * as z from 'zod'
-// @ts-ignore
-import { createTransport } from 'nodemailer'
+import { sendMail } from '@/services/mailService'
 
 type FormData = {
   name: string
@@ -29,28 +28,16 @@ export async function sendEmail(formData: FormData) {
   })
 
   if (!parse.success) {
-    return { error: 'Failed to parse contact data' }
+    return { error: 'Failed to parse email data' }
   }
 
   const data = parse.data
-
-  const transporter = createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'nickyuvienco@gmail.com',
-      pass: 'wzjy glib axgt gckp', // DONT COMMIT THIS
-    },
-  })
-  console.log('verify gmail transporter', transporter)
-
-  const info = await transporter.sendMail({
-    from: 'customer email here',
-    to: 'nickyuvienco@gmail.com', // personal email static for now
-    subject: 'Email subject',
-    text: 'email body', // plain text body
-  })
-
-  console.log('Message sent: %s', info.messageId)
+  const body = `
+    name: ${data.name}, 
+    email: ${data.email},
+    body: ${data.message}
+  `
+  await sendMail(data.subject, body)
 
   // try {
   //   return 'sent email'
