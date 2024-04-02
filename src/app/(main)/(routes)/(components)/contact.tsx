@@ -43,7 +43,7 @@ export default function Contact() {
   })
 
   const action: () => void = form.handleSubmit(async (data) => {
-    console.log('data', data)
+    console.log('CLIENT data', data)
     const response = await sendEmail(data)
     // if (response.error) {
     //   alert(response.error)
