@@ -63,7 +63,7 @@ export default function Contact() {
                 <FormItem className="absolute -left-full">
                   <FormLabel>Leave this field blank</FormLabel>
                   <FormControl>
-                    <Input tabIndex="-1" {...field} />
+                    <Input tabIndex={-1} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
