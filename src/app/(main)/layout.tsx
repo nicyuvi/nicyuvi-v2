@@ -5,6 +5,7 @@ import SideNav from '@/components/layout/side-nav'
 import { ThemeProvider } from '@/components/theme-provider'
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 
@@ -28,6 +29,7 @@ export default function RootLayout({
   // https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
   return (
     <html lang="en" suppressHydrationWarning>
+      <SpeedInsights />
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
