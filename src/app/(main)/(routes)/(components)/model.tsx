@@ -58,14 +58,16 @@ export default function Model() {
     <>
       <Canvas>
         <Suspense fallback={null}>
-          <ambientLight intensity={0.5} />
-          <spotLight
-            position={[10, 10, 10]}
-            angle={0.15}
-            penumbra={1}
-            intensity={1}
-            castShadow
-          />
+          {
+            // <ambientLight intensity={0.5} />
+            // <spotLight
+            //   position={[10, 10, 10]}
+            //   angle={0.15}
+            //   penumbra={1}
+            //   intensity={1}
+            //   castShadow
+            // />
+          }
           <Moppu />
         </Suspense>
       </Canvas>
