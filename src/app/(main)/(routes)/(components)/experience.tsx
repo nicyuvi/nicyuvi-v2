@@ -7,22 +7,23 @@ import ExperienceCard from './experience-card'
 export default function Experience() {
   const curr = {
     dates: '2023 - Present',
-    company: 'Indie Developer',
-    role: 'Full-Stack Engineer',
-    description: 'Working on Notehub: A collaborative, note taking web app',
+    company: 'Yuvi Web Design',
+    role: 'Web Developer and Designer',
+    description: `
+      A web design studio focused on creating captivating digital experiences that drive tangible
+      results for your business.
+    `,
     techList: [
       'NextJS',
       'TypeScript',
       'NodeJS',
       'TailwindCSS',
       'Prisma',
-      'Postgres',
-      'SQLite',
-      'Python',
-      'Flask',
+      'Sanity',
+      'PostHog',
     ],
-    link: '/#projects',
-    target: '_self',
+    link: 'https://yuviwebdesign.com',
+    target: '_blank',
   }
 
   const lensabl = {
