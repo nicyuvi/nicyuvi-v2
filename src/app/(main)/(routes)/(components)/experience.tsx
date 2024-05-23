@@ -113,7 +113,7 @@ export default function Experience() {
       </div>
       <Link
         className="flex items-center justify-end"
-        href="/static/Yuvienco_-_Full_Stack_Engineer_Resume_v.1.pdf"
+        href="/static/Yuvienco_-_Full_Stack_Web_Developer_Resume_v.2.pdf"
         target="_blank"
       >
         <Button variant="outline">
