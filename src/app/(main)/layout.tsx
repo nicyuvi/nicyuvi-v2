@@ -5,6 +5,7 @@ import SideNav from '@/components/layout/side-nav'
 import { ThemeProvider } from '@/components/theme-provider'
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
+import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
@@ -54,6 +55,7 @@ export default function RootLayout({
             <Footer />
           </footer>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
