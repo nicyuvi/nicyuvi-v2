@@ -1,32 +1,24 @@
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <>
-      <span className="font-semibold text-primary">Hi, my name is</span>
-      <h1 className="mb-4 text-3xl font-bold text-foreground md:text-6xl">
-        Nicolis Yuvienco.
-      </h1>
-      <h1 className="mb-2 text-3xl font-semibold text-muted-foreground md:text-5xl">
-        I&apos;m a Full-Stack Engineer.
-      </h1>
-      <p className="mb-12 font-semibold text-muted-foreground">
-        I build pixel-perfect websites and applications using the latest
-        technologies.
-      </p>
-      <div className="flex flex-col">
-        <Link href="#contact">
-          <Button className="mb-4 w-full" variant="outline">
-            {'get in touch'.toUpperCase()}
-          </Button>
+    <div>
+      <h1 className="text-2xl">
+        <Link href="#experience" className="hover:text-primary">
+          I produce clean, efficient, and developer friendly front end web dev
+          code.
         </Link>
-        <Link href="#experience">
-          <Button variant="outline" className="w-full">
-            {'view my work'.toUpperCase()}
-          </Button>
+      </h1>
+      <h1>
+        You can check out my side interests{' '}
+        <Link
+          href="https://yuviwebdesign.com"
+          target="_blank"
+          className="hover:text-primary"
+        >
+          here.
         </Link>
-      </div>
-    </>
+      </h1>
+    </div>
   )
 }
