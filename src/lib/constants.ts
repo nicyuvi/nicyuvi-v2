@@ -4,7 +4,7 @@ type NavLink = {
 }
 export const NAV_LINKS: NavLink[] = [
   {
-    href: '/static/Yuvienco-Software-Engineer-Resume-v.1.2.1.pdf',
+    href: '/static/Yuvienco-Software-Engineer-Resume-v.1.3.pdf',
     name: 'resume',
   },
   { href: '/#experience', name: 'experience' },
